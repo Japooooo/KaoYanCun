@@ -23,4 +23,4 @@
 
 启动命令：`mvn spring-boot:run`
 
-docker镜像打包：`mvn docker:build`
+docker镜像打包：`mvn docker:build` 
