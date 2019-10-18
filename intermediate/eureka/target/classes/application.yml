@@ -1,0 +1,21 @@
+server:
+  port: ${EUREKA_PORT:1022}
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${EUREKA_ZONE_HOST:localhost}:${EUREKA_ZONE_PORT:1022}/eureka/
+
+spring:
+  application:
+    name: eureka-server
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:localhost}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:kaoyan}
+    password: ${RABBIT_MQ_PASSWORD:kaoyan123}
